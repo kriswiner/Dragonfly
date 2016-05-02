@@ -397,7 +397,6 @@ void I2Cscan()
         return temp[0];
         }
 
-
         void readBytes(uint8_t address, uint8_t subAddress, uint8_t count, uint8_t * dest) {
         Wire.transfer(address, &subAddress, 1, dest, count); 
         }
