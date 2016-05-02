@@ -19,7 +19,7 @@
   */
   
 #include <Wire.h>  
-#define Serial SerialUSB // might not be needed in fuure
+#define Serial SerialUSB // might not be needed in future
 
 // BME280 registers
 #define BME280_HUM_LSB    0xFE
@@ -41,7 +41,7 @@
 
 #define BME280_ADDRESS           0x76   // Address of BMP280 altimeter when ADO = 0
 
-#define myLed       13 // red led
+#define myLed       13 // green led
 
 enum Posr {
   P_OSR_00 = 0,  // no op
