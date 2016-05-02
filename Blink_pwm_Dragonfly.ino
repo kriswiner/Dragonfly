@@ -1,4 +1,4 @@
-   /*
+/*
   Blink_pwm_Dragonfly
   Runs through the full 255 color spectrum for three rgb leds using pwm pins3,4,5 and 6,8,9, and 20, 21, 22
  
@@ -22,14 +22,15 @@ const boolean invert = false; // set true if common anode, false if common catho
 
 uint8_t color = 0;        // a value from 0 to 255 representing the hue
 uint8_t R, G, B;          // the Red Green and Blue color components
-uint8_t brightness = 255; // 255 is maximum brightness
+uint8_t brightness = 1023; // 1023 is maximum brightness, but can be changed
 
 // the setup routine runs once when you press reset:
 void setup() 
 {             
-  
+  analogWriteResolution(10); // default is 8 which means 256 colors
+
  for(int i=0; i<10; i++) {
-  analogWrite(ledArray[i], 255);  // test high output of all leds in sequence
+  analogWrite(ledArray[i], 1023);  // test high output of all leds in sequence
   delay(1000);
   analogWrite(ledArray[i], 0);
  }
