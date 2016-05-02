@@ -3,9 +3,9 @@
    This example code is in the public domain.
 */
 
-#define myLed1 13 // red led
-#define myLed2 25 // green led
-#define myLed3 26 // blue led
+#define myLed1 13 // green led
+#define myLed2 25 // red   led
+#define myLed3 26 // blue  led
 
 void setup() 
 {
