@@ -1,6 +1,6 @@
 # Dragonfly
 
-This is Dragonfly, a small (0.7 in. x 1.4 in.) breakout board for ST's latest high-performance, ultra-low-power line of 32-bit microcontrollers: the STM32L4X6 family. Dragonfly uses the STM32L476RE 64-pin LQFP chip package with 512 kB of high-speed flash memory, 128 kB SRAM, running at up to 80 MHz with a single-precision floating point unit.
+This is Dragonfly, a small (0.7 in. x 1.4 in.) breakout board for ST's latest high-performance, ultra-low-power line of 32-bit microcontrollers: the STM32L4X6 family. Dragonfly uses the STM32L476RE 64-pin LQFP chip package with 512 kB of high-speed flash memory, 128 kB SRAM, running at up to 80 MHz with a single-precision floating point unit. Dragonfly is for sale at [Tindie](https://www.tindie.com/products/onehorse/dragonfly-stm32l4-breakout-board/) for $29.95.
 
 ![](https://cloud.githubusercontent.com/assets/6698410/14963938/eca809aa-105a-11e6-91cc-be9b1aae705a.png)
 
