@@ -7,7 +7,10 @@
  Demonstrate basic MPU-9250 functionality including parameterizing the register addresses, initializing the sensor, 
  getting properly scaled accelerometer, gyroscope, and magnetometer data out. 
  Addition of 9 DoF sensor fusion using open source Madgwick and Mahony filter algorithms. 
- Sketch runs on the 3.3 V Dreagonfly STM32L476 Breakout Board.
+ 
+ This version uses the MPU9250 interrupt instead of polling and gets up to 13.5 kHz sensor fusion rates using the Madgwick algorithm.
+ 
+ Sketch runs on the 3.3 V Dragonfly STM32L476 Breakout Board.
  
  SDA and SCL have 4K7 pull-up resistors (to 3.3V).
  
