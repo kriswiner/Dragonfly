@@ -6,6 +6,6 @@ This is Dragonfly, a small (0.7 in. x 1.4 in.) breakout board for ST's latest hi
 
 This is a repository of simple sketches that demonstrate how to use the Arduino IDE to program Dragonfly to read sensors, send serial output, control radios and displays, etc. If you can run a blink sketch in Arduino you can program a 32-bit Cortex M4F microcontroller!
 
-Here's Dragonfly running three RGB leds through the color spectrum using 9 PWM outputs!
+Here's Dragonfly running three RGB leds through the color spectrum using 9 PWM outputs via the Blink_pwm_Dragonfly.ino sketch!
 
 ![](https://cloud.githubusercontent.com/assets/6698410/14970256/538ca164-107c-11e6-9ae7-14e755f4c592.jpg)
