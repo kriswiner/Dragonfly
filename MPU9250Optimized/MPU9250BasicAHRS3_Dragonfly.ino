@@ -475,10 +475,10 @@ void getMres() {
  	// Possible magnetometer scales (and their register bit settings) are:
 	// 14 bit resolution (0) and 16 bit resolution (1)
     case MFS_14BITS:
-          mRes = 10.*4219./8190.; // Proper scale to return milliGauss
+          mRes = 10.*4912./8190.; // Proper scale to return milliGauss
           break;
     case MFS_16BITS:
-          mRes = 10.*4219./32760.0; // Proper scale to return milliGauss
+          mRes = 10.*4912./32760.0; // Proper scale to return milliGauss
           break;
   }
 }
@@ -674,7 +674,7 @@ void magcalMPU9250(float * dest1, float * dest2)
 {
   uint16_t ii = 0, sample_count = 0;
   int32_t mag_bias[3] = {0, 0, 0}, mag_scale[3] = {0, 0, 0};
-  int16_t mag_max[3] = {0x8000, 0x8000, 0x8000}, mag_min[3] = {0x7FFF, 0x7FFF, 0x7FFF}, mag_temp[3] = {0, 0, 0};
+  int16_t mag_max[3] = {-32767, -32767, -32767}, mag_min[3] = {32767, 32767, 32767}, mag_temp[3] = {0, 0, 0};
 
   Serial.println("Mag Calibration: Wave device in a figure eight until done!");
   delay(4000);
