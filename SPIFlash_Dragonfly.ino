@@ -59,8 +59,6 @@ unsigned char flash_wait_for_write = 0;
 
 void setup(void)
 {
-  pinMode(CSPIN, OUTPUT);
-
   SPI.begin();
   pinMode(CSPIN, OUTPUT);
   digitalWrite(CSPIN, HIGH);
