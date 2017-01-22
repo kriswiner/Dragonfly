@@ -29,8 +29,9 @@ Sketch based on the work of Pete (El Supremo) as follows:
 
 #include <SPI.h>
 
-// Highest page number is 0xffff=65535
-int page_number = 0xFFFF;
+// Highest page number is 0xFFFF = 65535 for 128 Mbit flash
+// Highest page number is 0x0EFF =  4095 for   8 Mbit flash
+int page_number = 0x0EFF;
 unsigned char w_page[256];
 unsigned char r_page[256];
 
