@@ -86,6 +86,7 @@ void setup(void)
   Serial.println("Winbond W25Q80BLUX1G    Chip ID = 0xEF, 0x40, 0x14, 0x0");
   Serial.println("Macronix MX25L12835FZNI Chip ID = 0xC2, 0x20, 0x18, 0xC2");
   Serial.println("Spansion S25FL127S      Chip ID = 0x01, 0x20, 0x18, 0x4D");
+  Serial.println("Winbond W25Q128FVSIG    Chip ID = 0xEF, 0x40, 0x18, 0x0");
   Serial.println(" ");
   
 /* Initialize the array to 0,1,2,3 etc.*/
