@@ -283,8 +283,8 @@ uint8_t Posr = P_OSR_16, Hosr = H_OSR_16, Tosr = T_OSR_02, Mode = normal, IIRFil
 int32_t t_fine;
 
 float Temperature, Pressure, Humidity; // stores BME280 pressures sensor pressure and temperature
-uint32_t rawPress, rawTemp;            // pressure and temperature raw count output for BME280
-uint16_t rawHumidity;                  // variables to hold raw BME280 humidity value
+int32_t rawPress, rawTemp;            // pressure and temperature raw count output for BME280
+int16_t rawHumidity;                  // variables to hold raw BME280 humidity value
 
 // BME280 compensation parameters
 uint8_t  dig_H1, dig_H3, dig_H6;
@@ -1138,25 +1138,25 @@ void MPU9250SelfTest(float * destination) // Should return percent deviation fro
    
 }
 
-uint32_t readBME280Temperature()
+int32_t readBME280Temperature()
 {
   uint8_t rawData[3];  // 20-bit pressure register data stored here
   readBytes(BME280_ADDRESS, BME280_TEMP_MSB, 3, &rawData[0]);  
-  return (uint32_t) (((uint32_t) rawData[0] << 16 | (uint32_t) rawData[1] << 8 | rawData[2]) >> 4);
+  return (int32_t) (((int32_t) rawData[0] << 24 | (int32_t) rawData[1] << 16 | (int32_t) rawData[2] << 8) >> 12);
 }
 
-uint32_t readBME280Pressure()
+int32_t readBME280Pressure()
 {
   uint8_t rawData[3];  // 20-bit pressure register data stored here
-  readBytes(BME280_ADDRESS, BME280_PRESS_MSB, 3, &rawData[0]);  
-  return (uint32_t) (((uint32_t) rawData[0] << 16 | (uint32_t) rawData[1] << 8 | rawData[2]) >> 4);
+  readBytes(BME280_ADDRESS, BME280_PRESS_MSB, 3, &rawData[0]);    
+  return (int32_t) (((int32_t) rawData[0] << 24 | (int32_t) rawData[1] << 16 | (int32_t) rawData[2] << 8) >> 12); 
 }
 
-uint16_t readBME280Humidity()
+int16_t readBME280Humidity()
 {
   uint8_t rawData[3];  // 20-bit pressure register data stored here
   readBytes(BME280_ADDRESS, BME280_HUM_MSB, 2, &rawData[0]);  
-  return (uint16_t) (((uint16_t) rawData[0] << 8 | rawData[1]) );
+  return (int16_t) (((int16_t) rawData[0] << 8 | rawData[1]) );
 }
 
 void BME280Init()
