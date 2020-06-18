@@ -259,7 +259,9 @@ void setup()
   Serial.begin(115200);
   delay(1000);
   
-  Wire.begin(0, 400000, true); // set master mode, I2C frequncy at 400 kHz
+  Wire.begin(TWI_PINS_20_21); // set master mode 
+  Wire.setClock(400000);      // I2C frequency at 400 kHz 
+ 
   delay(1000);
   
   // Set up the interrupt pin, it's set as active high, push-pull
